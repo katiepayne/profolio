@@ -12,9 +12,9 @@ public abstract class Interaction<T> {
     Integer Id;
     
     /**
-     * Boxed Target Object.
+     * Target Object.
      */
-    Object Target;
+    T Target;
     
     /**
      * User who is interacting.
@@ -32,12 +32,4 @@ public abstract class Interaction<T> {
      * @return 
      */
     public abstract String getName();
-    
-    /**
-     * Unboxes the Target.
-     * @return 
-     */
-    public T getTarget() {
-        return (T) Target;
-    }
 }
