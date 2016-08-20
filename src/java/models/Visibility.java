@@ -16,7 +16,7 @@ public enum Visibility {
     Draft,
 
     /**
-     * Draft status.
+     * Pending status.
      */
     Pending,
 
