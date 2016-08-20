@@ -5,7 +5,7 @@ import models.Role;
 import models.User;
 
 /**
- * Entities for which AccessRights should be applied.
+ * Entities for which AccessRights should be applied implement this interface.
  */
 public interface IAccessable {
     

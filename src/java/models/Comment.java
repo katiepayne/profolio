@@ -1,14 +1,28 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package models;
 
 /**
- * Single Comment Model.
+ * Comment Object Model.
  */
-public class Comment extends Interaction<Comment> {
+public class Comment extends Interaction<Comment> {    
+    /**
+     * Comment Content.
+     */
+    String Content;
+    
+    /**
+     * Comment Replies.
+     */
+    Comments Replies;
+    
+    /**
+     * Comment Likes;
+     */
+    Likes Likes;
+    
+    /**
+     * Comment Visibility Status.
+     */
+    Visibility Status;
     
     /**
      * Required Overridden Interaction Name.
@@ -17,5 +31,5 @@ public class Comment extends Interaction<Comment> {
     @Override
     public String getName() {
         return "Comment";
-    }
+    }       
 }
