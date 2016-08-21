@@ -14,8 +14,9 @@ public interface ICommentable {
      * @param user - User Adding the comment.
      * @param entity - ICommentable Entity being commented.
      * @param comment - Comment to add.
+     * @return Comment.
      */
-    void AddComment(User user, Object entity, Comment comment);
+    Comment AddComment(User user, Object entity, Comment comment);
 
     /**
      * Adds a comment to an ICommentable Entity.
@@ -24,8 +25,9 @@ public interface ICommentable {
      * @param entity - ICommentable Entity being commented.
      * @param title - Title of the comment.
      * @param content - Comment content.
+     * @return Comment.
      */
-    void AddComment(User user, ICommentable entity, String title, String content);
+    Comment AddComment(User user, ICommentable entity, String title, String content);
 
     /**
      * Updates a comment.
@@ -33,7 +35,7 @@ public interface ICommentable {
      * @param user - User requesting the update.
      * @param comment - Comment to be updated.
      */
-    void UpdateComment(User user, Comment comment);
+    Comment UpdateComment(User user, Comment comment);
     
     /**
      * Removes a Comment from the Target Entity.
