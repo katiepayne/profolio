@@ -2,6 +2,7 @@ package controllers;
 
 import Bridge.Bridge;
 import java.util.Dictionary;
+import java.util.List;
 import models.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,6 +37,14 @@ public class UserController {
     public UserController() {
         // Populate the CtrlBridge for this controller.
         CtrlBridge = Databridge.get(ControllerKey);
+    }
+
+    /**
+     * Returns all users.
+     */
+    @RequestMapping(value = "all", method = RequestMethod.GET)
+    public List<User> getUsers (@RequestParam int userId) {
+        return CtrlBridge.getObjects();
     }
     
     /**

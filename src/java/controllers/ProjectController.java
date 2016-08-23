@@ -2,6 +2,7 @@ package controllers;
 
 import Bridge.Bridge;
 import java.util.Dictionary;
+import java.util.List;
 import models.Project;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Project Controller: Handles logic for Projects.
  */
 @Controller
-@RequestMapping(value = "/projects")
+@RequestMapping(value = "/project")
 public class ProjectController {
     
     /**
      * Controller Key for the data bridge.
      */
-    String ControllerKey = "projects";
+    String ControllerKey = "project";
     
     /**
      * Collection of Data Bridges.
@@ -36,10 +37,18 @@ public class ProjectController {
     public ProjectController() {
         // Populate the CtrlBridge for this controller.
         CtrlBridge = Databridge.get(ControllerKey);
+    }    
+    
+    /**
+     * Returns all projects.
+     */
+    @RequestMapping(value = "all", method = RequestMethod.GET)
+    public List<Project> getProject () {
+        return CtrlBridge.getObjects();
     }
     
     /**
-     * Returns the post by its id.
+     * Returns the projects by its id.
      * @param projectId - Project ID.
      * @return Post.
      */

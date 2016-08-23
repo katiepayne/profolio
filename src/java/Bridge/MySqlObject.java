@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Bridge;
 
 import java.security.NoSuchAlgorithmException;
@@ -63,7 +58,7 @@ public class MySqlObject extends Bridge {
     }
 
     private ResultSet executeQuery() {
-                    Statement stmt = conn.createStatement();
+            Statement stmt = conn.createStatement();
             String query = "select columnname from tablename ;" ;
             ResultSet rs = stmt.executeQuery(query) ;
 

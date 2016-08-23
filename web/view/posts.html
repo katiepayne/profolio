@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{vm.title}}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!--Include the Header Partial-->
+        <header ng-include src="'/partial/header.html'"></header>
+
+        <!--View Controller-->
+        <div ng-controller="blogCtrl">
+            <!--Scope of the Blog Controller-->
+
+            <!--Include the Post Repeater Partial-->
+            <div ng-include src="'/partial/postRepeater.html'"></div>
+        </div>
+        
+        <!--Include the Footer Partial-->
+        <footer ng-include src="'/partial/footer.html'"></footer>
+        
+        <!--Include shared scripts-->
+        <div ng-include src="'/partial/scripts.html'"></div>
+        
+        <!--Include page specific scripts-->
+        <script src="../js/blogCtrl.js" type="text/javascript"></script>
+    </body>
+</html>
